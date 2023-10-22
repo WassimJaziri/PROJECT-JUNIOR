@@ -21,7 +21,7 @@ const CreateCustomer = () => {
   return  (
     <div className="create-customer">
       <div>
-        <h2 className="head">كرني الكريدي</h2>
+        <h2 className="head"> Carnet Credit</h2>
       </div>
       <div>
         <input

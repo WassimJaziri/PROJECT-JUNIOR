@@ -11,6 +11,7 @@ import img from './assests/img.jpg'
 
 function App() {
   const [state, setState] = useState([]);
+  
   useEffect(() => {
     getAll();
   }, []);

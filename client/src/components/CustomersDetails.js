@@ -2,13 +2,21 @@ import axios from "axios";
 import React, { useState } from "react";
 
 const CustomersDetails = ({ customers }) => {
+  
   const [view, setView] = useState(false);
   const [newAmount, setNewAmount] = useState("");
   const [customer, setCustomer] = useState("");
+
+
   const changeView = () => {
     setView(!view);
   };
+
+  //API delete
+
   const strDate = new Date(customers.updatedDate);
+
+
   const deleteCustomer = (name) => {
     axios
       .delete(`http://localhost:8000/api/credit/deleteOne/${name}`)
@@ -16,6 +24,8 @@ const CustomersDetails = ({ customers }) => {
       .catch((err) => console.log(err));
     window.location.reload();
   };
+
+
   const changeAmount = (name) => {
     axios
       .put(`http://localhost:8000/api/credit/update/${name}`, {
@@ -26,6 +36,8 @@ const CustomersDetails = ({ customers }) => {
       .catch((error) => console.log(error));
     window.location.reload();
   };
+
+
   return (
     <div className="cusomer-detail">
       <div>

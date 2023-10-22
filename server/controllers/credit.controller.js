@@ -8,6 +8,7 @@ const AllCredits = async (req, res) => {
     res.status(500).send(err);
   }
 };
+
 const addCredit = async (req, res) => {
   try {
     const credit = req.body.credit;
@@ -22,6 +23,7 @@ const addCredit = async (req, res) => {
     res.status(500).send(err);
   }
 };
+
 const updateCredit = async (req, res) => {
   try {
     const { customerName } = req.params;
@@ -37,6 +39,7 @@ const updateCredit = async (req, res) => {
   }
 };
 
+
 const deleteCredit = async (req, res) => {
   const customerName = req.params._id;
   try {
@@ -49,6 +52,7 @@ const deleteCredit = async (req, res) => {
     res.status(500).send(err);
   }
 };
+
 
 module.exports = {
   AllCredits,

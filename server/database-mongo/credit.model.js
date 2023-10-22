@@ -12,5 +12,4 @@ const creditSchema = new mongoose.Schema({
 });
 
 const Credit = mongoose.model("Credit", creditSchema);
-//Credit.create({ customerName: "customerName", credit: 124 });
 module.exports = Credit;
